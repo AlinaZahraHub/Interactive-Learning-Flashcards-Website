@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexiCard Pro - Immersive Learning Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="theme-kids"> <!-- Initial theme setting -->
+
+    <div class="dashboard-wrapper">
+
+        <!-- TOP NAVIGATION HUB (Bento Grid Selectors) -->
+        <header class="hub-header">
+            <div class="brand-block">
+                <h1>FlexiCard <span class="hub-tag">Hub</span></h1>
+                <button class="theme-toggle-btn js-theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+            </div>
+
+            <!-- Category Bento Switches -->
+            <nav class="category-bento-grid">
+                <button class="bento-switch active js-switch-kids" data-category="kids">
+                    <span class="bento-icon">🎨</span>
+                    <div class="bento-meta">
+                        <span class="bento-title">ABC Exploration</span>
+                        <span class="bento-desc">Kids Section</span>
+                    </div>
+                </button>
+                <button class="bento-switch js-switch-maths" data-category="maths">
+                    <span class="bento-icon">🧮</span>
+                    <div class="bento-meta">
+                        <span class="bento-title">Number Ninja</span>
+                        <span class="bento-desc">Maths Section</span>
+                    </div>
+                </button>
+                <button class="bento-switch js-switch-science" data-category="science">
+                    <span class="bento-icon">💻</span>
+                    <div class="bento-meta">
+                        <span class="bento-title">Web Dev Wizard</span>
+                        <span class="bento-desc">Coding Concepts</span>
+                    </div>
+                </button>
+            </nav>
+        </header>
+
+        <!-- MAIN DECK ZONE -->
+        <main class="study-arena">
+            <div class="arena-meta">
+                <span class="card-counter js-card-counter">Card 1 of 3</span>
+                <p class="quick-hint">Click the card to reveal the secret! 🔄</p>
+            </div>
+
+            <!-- 3D Flashcard Canvas Area -->
+            <div class="flashcard-stage">
+                <div class="flashcard js-flashcard" role="button" tabindex="0">
+                    <!-- Front View Container -->
+                    <div class="card-face card-front">
+                        <span class="card-node-label js-node-label">Challenge Node</span>
+                        <div class="card-body-content">
+                            <p class="card-text main-display js-card-question">--</p>
+                        </div>
+                        <span class="flip-action-hint">Click to flip 🔄</span>
+                    </div>
+                    <!-- Back View Container -->
+                    <div class="card-face card-back">
+                        <span class="card-node-label">Solution Node</span>
+                        <div class="card-body-content">
+                            <p class="card-text main-display js-card-answer">--</p>
+                        </div>
+                        <span class="flip-action-hint">Click to flip 🔄</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contextual Audio/Celebration Interactors -->
+            <div class="interaction-deck js-interaction-deck">
+                <!-- JavaScript dynamically injects Speak or Confetti buttons here based on active view -->
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="navigation-controls">
+                <button class="nav-btn js-prev-btn">◀ Previous</button>
+                <button class="nav-btn js-next-btn">Next ▶</button>
+            </div>
+        </main>
+
+        <!-- FOOTER: Creator Console -->
+        <footer class="creator-console">
+            <div class="form-container">
+                <h3>Inject Custom Node into Current Category</h3>
+                <div class="form-row">
+                    <input type="text" class="form-input js-input-question" placeholder="Enter Question / Front Text..."
+                        required>
+                    <input type="text" class="form-input js-input-answer" placeholder="Enter Answer / Back Text..."
+                        required>
+                    <button class="deploy-btn js-add-btn">Deploy Node</button>
+                </div>
+                <p class="error-message js-error-message"></p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Canvas Confetti Library Integration for Number Ninja Blast -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
